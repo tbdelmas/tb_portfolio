@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TABIO Bernard — Mon Portfolio</title>
+  <meta name="description"
+        content="Portfolio de TABIO Bernard, géomaticien et géomètre-topographe à Abidjan (Côte d'Ivoire). Plus de 15 ans d'expérience en SIG, télédétection, photogrammétrie et cartographie au BNETD-CIGN." />
+  <meta name="theme-color" content="#0f4c81" />
+  <!-- Favicon : punaise cartographique (SVG en ligne, aucun fichier requis) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230f4c81' d='M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z'/%3E%3Ccircle cx='12' cy='9' r='2.6' fill='%232a9d8f'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Accessibilité : lien d'évitement -->
+  <a class="skip-link" href="#accueil">Aller au contenu</a>
+
+  <!-- ==================== EN-TÊTE / NAVIGATION ==================== -->
+  <header class="site-header" id="haut-de-page">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="nav__logo" href="#accueil" aria-label="Retour à l'accueil">
+        <span class="nav__logo-sigle">TB</span>
+        <span class="nav__logo-nom">TABIO&nbsp;Bernard</span>
+      </a>
+
+      <ul class="nav__menu" id="menu-principal">
+        <li><a class="nav__lien" href="#accueil">Accueil</a></li>
+        <li><a class="nav__lien" href="#apropos">À&nbsp;propos</a></li>
+        <li><a class="nav__lien" href="#competences">Compétences</a></li>
+        <li><a class="nav__lien" href="#parcours">Parcours</a></li>
+        <li><a class="nav__lien" href="#projet">Projet</a></li>
+        <li><a class="nav__lien nav__lien--cta" href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav__burger" id="btn-burger" aria-label="Ouvrir le menu"
+              aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== 1. HERO ==================== -->
+    <section class="hero" id="accueil">
+      <!-- Décor : courbes de niveau (clin d'œil topographique) -->
+      <div class="hero__decor" aria-hidden="true"></div>
+
+      <div class="container hero__grille">
+        <div class="hero__texte reveal">
+          <p class="hero__sur-titre">Géomaticien · Géomètre-Topographe · Photogrammétrie, Télédétection &amp; SIG</p>
+          <h1 class="hero__titre">TABIO <span class="texte-accent">Bernard</span></h1>
+          <p class="hero__accroche">
+            « Plus de quinze ans d'expérience de la donnée spatiale,
+            au service des grands projets d'aménagement et de cartographie
+            de la Côte d'Ivoire. »
+          </p>
+          <div class="hero__badges">
+            <span class="badge">🏢 BNETD — CIGN</span>
+            <span class="badge">📍 Abidjan, Côte d'Ivoire</span>
+            <span class="badge">🛰️ Télépilote de drone certifié</span>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primaire" href="#contact">
+              Me contacter
+            </a>
+            <a class="btn btn--secondaire" href="CV_TABIO_Bernard.pdf" download>
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Télécharger mon CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__photo reveal">
+          <figure class="photo-cadre">
+            <img src="bernard_tabio.png" width="900" height="1200"
+                 alt="Portrait professionnel de TABIO Bernard, géomaticien" />
+            <figcaption class="photo-cadre__legende">
+              <strong>15+ ans</strong> d'expérience géospatiale
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Statistiques clés (chiffres animés au scroll — voir script.js) -->
+      <div class="container hero__stats reveal">
+        <div class="stat">
+          <span class="stat__chiffre" data-cible="15" data-suffixe="+">0</span>
+          <span class="stat__label">années d'expérience</span>
+        </div>
+        <div class="stat">
+          <span class="stat__chiffre" data-cible="20" data-suffixe="+">0</span>
+          <span class="stat__label">projets cartographiques nationaux</span>
+        </div>
+        <div class="stat">
+          <span class="stat__chiffre" data-cible="31">0</span>
+          <span class="stat__label">chefs-lieux cartographiés au 1/5 000</span>
+        </div>
+        <div class="stat">
+          <span class="stat__chiffre" data-cible="5000">0</span>
+          <span class="stat__label">hectares valorisés (barrage de Buyo)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. À PROPOS ==================== -->
+    <section class="section" id="apropos">
+      <div class="container">
+        <header class="section__tete reveal">
+          <p class="section__eyebrow">Qui suis-je ?</p>
+          <h2 class="section__titre">À propos</h2>
+        </header>
+
+        <div class="apropos__grille">
+          <article class="apropos__texte reveal">
+            <p class="texte-vedette">
+              Un professionnel de la donnée spatiale au service du développement.
+            </p>
+            <p>
+              Géomaticien chevronné, je capitalise plus de quinze années d'expérience au sein du
+              <strong>Centre d'Information Géographique et du Numérique (CIGN)</strong> du
+              <strong>Bureau National d'Études Techniques et de Développement (BNETD)</strong>,
+              où j'ai intégré les équipes Aéro-spatiales dès 2010.
+            </p>
+            <p>
+              Géomètre-topographe de formation — et titulaire en 2026 d'une <strong>licence
+              professionnelle en géomatique et stratégies spatiales</strong> — j'interviens en
+              télédétection, photogrammétrie, topographie, missions drones et systèmes
+              d'information géographique. J'ai contribué à des projets majeurs de cartographie
+              d'occupation des sols, de clarification foncière et de valorisation agricole
+              à l'échelle nationale.
+            </p>
+
+          </article>
+
+          <aside class="apropos__carte card reveal">
+            <h3 class="card__titre">En bref</h3>
+            <ul class="infos-liste">
+              <li>
+                <span class="infos-liste__label">Poste actuel</span>
+                Assistant en photogrammétrie &amp; télédétection — BNETD / CIGN
+              </li>
+              <li>
+                <span class="infos-liste__label">Localisation</span>
+                Abidjan, Côte d'Ivoire (01 BP 3862 Abidjan 01)
+              </li>
+              <li>
+                <span class="infos-liste__label">Langues</span>
+                Français — excellent (lu, écrit, parlé)<br />
+                Anglais — niveau intermédiaire
+              </li>
+              <li>
+                <span class="infos-liste__label">Domaines</span>
+                <span class="puces">
+                  <span class="puce">SIG</span><span class="puce">Télédétection</span>
+                  <span class="puce">Photogrammétrie</span><span class="puce">Topographie</span>
+                  <span class="puce">Drone</span><span class="puce">Foncier</span>
+                  <span class="puce">Gestion de projets</span>
+                </span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. COMPÉTENCES ==================== -->
+    <section class="section section--fond" id="competences">
+      <div class="container">
+        <header class="section__tete reveal">
+          <p class="section__eyebrow">Savoir-faire</p>
+          <h2 class="section__titre">Compétences techniques</h2>
+        </header>
+
+        <!-- Cartes par domaine -->
+        <div class="competences__grille">
+          <article class="card competence reveal">
+            <div class="competence__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="card__titre">SIG &amp; Télédétection</h3>
+            <p>Analyse spatiale, cartes d'occupation des sols, extraction de couches vectorielles, géodatabases d'entreprise.</p>
+            <p class="puces">
+              <span class="puce">ArcGIS Pro</span><span class="puce">ArcGIS Enterprise</span>
+              <span class="puce">QGIS</span><span class="puce">ENVI</span>
+              <span class="puce">Erdas Imagine</span>
+            </p>
+          </article>
+
+          <article class="card competence reveal">
+            <div class="competence__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m3 8 5-3 5 3 5-3 3 2v11l-5 3-5-3-5 3-3-2V8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="card__titre">Photogrammétrie &amp; 3D</h3>
+            <p>Traitement d'images satellitaires et aériennes, restitution stéréographique, orthophotographie.</p>
+            <p class="puces">
+              <span class="puce">Pix4D</span><span class="puce">MicroStation PRO 600</span>
+              <span class="puce">Immersive Studio (iSTAR Pulsar)</span>
+            </p>
+          </article>
+
+          <article class="card competence reveal">
+            <div class="competence__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card__titre">Topographie &amp; Foncier</h3>
+            <p>Levés topographiques, cadastre, géolocalisation et digitalisation du potentiel foncier agricole.</p>
+            <p class="puces">
+              <span class="puce">AutoCAD</span><span class="puce">Covadis 2D/3D</span>
+              <span class="puce">Levés terrain</span><span class="puce">Cadastre</span>
+            </p>
+          </article>
+
+          <article class="card competence reveal">
+            <div class="competence__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="9" y="9" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 class="card__titre">Drone &amp; acquisition</h3>
+            <p>Télépilote certifié : planification et exécution de missions de vol, photogrammétrie par drone.</p>
+            <p class="puces">
+              <span class="puce">Télépilote certifié</span><span class="puce">eBee X</span>
+              <span class="puce">Planification de vol</span>
+            </p>
+          </article>
+
+          <article class="card competence reveal">
+            <div class="competence__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20V10l8-6 8 6v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="card__titre">Gestion de projets</h3>
+            <p>Études de faisabilité, planification, contrôle des coûts, méthode GAR, encadrement d'équipes terrain.</p>
+            <p class="puces">
+              <span class="puce">Méthode GAR</span><span class="puce">Planification</span>
+              <span class="puce">Encadrement</span>
+            </p>
+          </article>
+
+          <article class="card competence reveal">
+            <div class="competence__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8m-4-4v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card__titre">Bureautique &amp; Design</h3>
+            <p>Production cartographique et rendus professionnels, rapports et supports de communication.</p>
+            <p class="puces">
+              <span class="puce">MS Office</span><span class="puce">Adobe Photoshop</span>
+              <span class="puce">Illustrator</span>
+            </p>
+          </article>
+        </div>
+
+        <!-- Niveaux de maîtrise (valeurs indicatives — librement modifiables) -->
+        <div class="niveaux reveal">
+          <h3 class="niveaux__titre">Niveaux de maîtrise</h3>
+          <div class="niveaux__grille">
+            <div class="niveau">
+              <div class="niveau__tete"><span>SIG (ArcGIS Pro, QGIS)</span><span class="niveau__val">Expert</span></div>
+              <div class="barre"><div class="barre__remplissage" data-niveau="95"></div></div>
+            </div>
+            <div class="niveau">
+              <div class="niveau__tete"><span>Télédétection (ENVI, Erdas)</span><span class="niveau__val">Expert</span></div>
+              <div class="barre"><div class="barre__remplissage" data-niveau="90"></div></div>
+            </div>
+            <div class="niveau">
+              <div class="niveau__tete"><span>Photogrammétrie &amp; restitution 3D</span><span class="niveau__val">Expert</span></div>
+              <div class="barre"><div class="barre__remplissage" data-niveau="90"></div></div>
+            </div>
+            <div class="niveau">
+              <div class="niveau__tete"><span>Topographie &amp; DAO (AutoCAD, Covadis)</span><span class="niveau__val">Avancé</span></div>
+              <div class="barre"><div class="barre__remplissage" data-niveau="85"></div></div>
+            </div>
+            <div class="niveau">
+              <div class="niveau__tete"><span>Drone &amp; photogrammétrie UAV</span><span class="niveau__val">Avancé</span></div>
+              <div class="barre"><div class="barre__remplissage" data-niveau="85"></div></div>
+            </div>
+            <div class="niveau">
+              <div class="niveau__tete"><span>Développement web cartographique (Leaflet)</span><span class="niveau__val">Intermédiaire</span></div>
+              <div class="barre"><div class="barre__remplissage" data-niveau="70"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. PARCOURS ==================== -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <header class="section__tete reveal">
+          <p class="section__eyebrow">Carrière &amp; formation</p>
+          <h2 class="section__titre">Parcours</h2>
+        </header>
+
+        <div class="parcours__grille">
+          <!-- Timeline : expérience professionnelle -->
+          <div class="timeline reveal">
+            <h3 class="timeline__titre">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              Expérience professionnelle
+            </h3>
+
+            <div class="etape">
+              <p class="etape__date">Depuis oct. 2017</p>
+              <h4 class="etape__titre">Assistant en techniques de photogrammétrie &amp; télédétection</h4>
+              <p class="etape__org">BNETD — Centre d'Information Géographique et du Numérique (CIGN), Abidjan</p>
+              <ul class="etape__details">
+                <li>2026 : géolocalisation &amp; digitalisation du potentiel foncier agricole (Denguélé)</li>
+                <li>2024 : encadrement des équipes de terrain — carte topographique de Côte d'Ivoire au 1/50 000</li>
+                <li>2023 : valorisation agricole de 5 000 ha en aval du barrage de Buyo</li>
+                <li>2022-2023 : collecte de terrain pour la carte d'occupation des sols (OCS 2020)</li>
+              </ul>
+            </div>
+
+            <div class="etape">
+              <p class="etape__date">2009 — 2017</p>
+              <h4 class="etape__titre">Technicien en restitution</h4>
+              <p class="etape__org">BNETD — CIGN, Abidjan</p>
+              <ul class="etape__details">
+                <li>2018 : aménagement hydroélectrique de Gribo-Popoli — cartes parcellaires &amp; dossiers techniques</li>
+                <li>2018 : traitement de mappes cadastrales et spatio-cartes (travaux cadastraux nationaux)</li>
+                <li>2016-2018 : Système de Surveillance des Terres (SST) de Côte d'Ivoire</li>
+                <li>2014-2016 : plans au 1/5 000 de 31 chefs-lieux, plan cadastral d'Assinie</li>
+                <li>2013 : travaux topographiques — aménagement hydroélectrique de Soubré &amp; cartes électorales</li>
+                <li>2010 : transfert de la capitale à Yamoussoukro — restitution 3D (ArcGIS Stéréo-Analyste)</li>
+              </ul>
+            </div>
+
+            <div class="etape">
+              <p class="etape__date">2006 — 2009</p>
+              <h4 class="etape__titre">Stages &amp; premières expériences</h4>
+              <p class="etape__org">Direction du Cadastre (SEI) · Cabinet Génie Vision · Port Autonome de San Pedro</p>
+              <ul class="etape__details">
+                <li>Cadastre &amp; recouvrement de l'impôt foncier (Abidjan Plateau)</li>
+                <li>État des lieux pour projet de lotissement à Songon</li>
+                <li>PFE : tracé routier &amp; réhabilitation des infrastructures portuaires (San Pedro)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline : formation -->
+          <div class="timeline timeline--formation reveal">
+            <h3 class="timeline__titre">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              Formation &amp; diplômes
+            </h3>
+
+            <div class="etape">
+              <p class="etape__date">2026</p>
+              <h4 class="etape__titre">Licence professionnelle — Géomatique &amp; Stratégies Spatiales</h4>
+              <p class="etape__org">Université Félix Houphouët-Boigny, Abidjan</p>
+            </div>
+
+            <div class="etape">
+              <p class="etape__date">2009</p>
+              <h4 class="etape__titre">BTS Génie Civil — option Géomètre-Topographe</h4>
+              <p class="etape__org">Lycée Professionnel de San Pedro</p>
+            </div>
+
+            <div class="etape">
+              <p class="etape__date">2006</p>
+              <h4 class="etape__titre">BT Génie Civil — option Géomètre-Topographe</h4>
+              <p class="etape__org">Lycée Professionnel de San Pedro</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certifs reveal">
+          <h3 class="certifs__titre">Certifications professionnelles</h3>
+          <div class="certifs__grille">
+            <div class="card certif">
+              <h4>SIG &amp; outils Esri</h4>
+              <ul>
+                <li>2023 — ArcGIS Enterprise : déploiement &amp; géodatabase (Esri France)</li>
+                <li>2023 — ArcGIS Pro : processus essentiels &amp; migration (Esri France)</li>
+              </ul>
+            </div>
+            <div class="card certif">
+              <h4>Drones, photogrammétrie &amp; DAO</h4>
+              <ul>
+                <li>2022 &amp; 2025 — Télépilote de drone certifié (Drone Académie)</li>
+                <li>2022-2023 — UAV &amp; Aerial Image Acquisition (PLACE / Event38 / Mosaic51)</li>
+                <li>2020 — Drone photogrammétrique &amp; Pix4D, eBee X (Géomatos CI)</li>
+                <li>2016 — Restitution photogrammétrique PRO600 (Geosystems France)</li>
+                <li>2016 — COVADIS 2D/3D (CEFIP-BTP)</li>
+              </ul>
+            </div>
+            <div class="card certif">
+              <h4>Gestion de projets &amp; GAR</h4>
+              <ul>
+                <li>2026 — Conception &amp; montage de projet selon la GAR (CF-BNETD)</li>
+                <li>2025 — Planification &amp; contrôle des coûts de projets (CF-BNETD)</li>
+              </ul>
+            </div>
+            <div class="card certif">
+              <h4>Sécurité &amp; développement durable</h4>
+              <ul>
+                <li>2021 — Équipier de 1<sup>re</sup> intervention &amp; Sauveteur Secouriste du Travail</li>
+                <li>2014 — Ville durable : être acteur du changement (Univ. Montpellier 2)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. PROJET PHARE ==================== -->
+    <section class="section section--fond" id="projet">
+      <div class="container">
+        <header class="section__tete reveal">
+          <p class="section__eyebrow">Réalisation</p>
+          <h2 class="section__titre">Projet phare</h2>
+        </header>
+
+        <article class="projet card reveal">
+          <div class="projet__contenu">
+            <p class="projet__etiquette">🗺️ Carte web interactive</p>
+            <h3 class="projet__titre">Aménagement hydroélectrique de Gribo-Popoli<br />&amp; clarification foncière</h3>
+            <p class="projet__description">
+              Application web cartographique dédiée au projet hydroélectrique de Gribo-Popoli
+              (fleuve Sassandra) et à la <strong>clarification foncière</strong> des terrains
+              impactés. Conçue à partir de mon expérience de terrain sur ce projet national —
+              cartes parcellaires et dossiers techniques au BNETD — elle rend la donnée
+              foncière accessible et consultable par tous les acteurs, directement dans le navigateur.
+            </p>
+            <ul class="projet__points">
+              <li>Navigation libre sur fond satellite haute résolution</li>
+              <li>Consultation des entités localisées avec fiches d'information (popups)</li>
+              <li>Regroupement intelligent des points (clusters) pour une lecture fluide</li>
+              <li>100&nbsp;% web : aucune installation, accessible sur mobile et desktop</li>
+            </ul>
+            <p class="puces projet__tech">
+              <span class="puce puce--tech">Leaflet 1.9</span>
+              <span class="puce puce--tech">Leaflet.markercluster</span>
+              <span class="puce puce--tech">Imagerie Esri World Imagery</span>
+              <span class="puce puce--tech">HTML / CSS / JS</span>
+              <span class="puce puce--tech">GitHub Pages</span>
+            </p>
+            <div class="projet__actions">
+              <!-- ══ Lien du projet — le SEUL à modifier si l'URL change ══ -->
+              <a class="btn btn--primaire btn--grand"
+                 href="https://tbdelmas.github.io/amenagement_hydroelectrique/"
+                 target="_blank" rel="noopener">
+                Voir le projet en ligne
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6L10 14M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Aperçu : image satellite + chargement de la carte à la demande -->
+          <div class="projet__apercu">
+            <div class="navigateur-factice">
+              <div class="navigateur-factice__barre">
+                <span class="point point--rouge"></span>
+                <span class="point point--jaune"></span>
+                <span class="point point--vert"></span>
+                <span class="navigateur-factice__url">tbdelmas.github.io/amenagement_hydroelectrique</span>
+              </div>
+              <div class="navigateur-factice__ecran" id="apercu-projet"
+                   data-url="https://tbdelmas.github.io/amenagement_hydroelectrique/">
+                <img src="PL-001-HYDRO-GBPPL-LOCALISATION_GENERALE-A0_V2.png" width="1680" height="945"
+                     alt="Vue satellite de la zone du barrage de Gribo-Popoli (fleuve Sassandra)" />
+                <div class="ecran__overlay">
+                  <button class="btn btn--primaire" id="btn-charger-carte" type="button">
+                    <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                    Charger la carte interactive
+                  </button>
+                  <p class="ecran__note">L'aperçu se charge à la demande (connexion requise)</p>
+                </div>
+              </div>
+            </div>
+            <p class="projet__credit">Imagerie © Esri — Maxar, Earthstar Geographics et communauté SIG</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT ==================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__tete reveal">
+          <p class="section__eyebrow">Restons en contact</p>
+          <h2 class="section__titre">Contact</h2>
+        </header>
+
+        <div class="contact__grille">
+          <!-- Coordonnées -->
+          <div class="contact__cartes reveal">
+            <a class="card contact-card" href="/cdn-cgi/l/email-protection#d2a6b0b6b7bebfb3a192b5bfb3bbbefcb1bdbf">
+              <span class="contact-card__icone" aria-hidden="true">
+                <svg class="icone" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <strong>Email</strong><br /><span class="__cf_email__" data-cfemail="750117111019181406351218141c195b161a18">tbdelmas@gmail.com</span><br />
+                
+            </a>
+            <a class="card contact-card" href="tel:+2250707260273">
+              <span class="contact-card__icone" aria-hidden="true">
+                <svg class="icone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <strong>Téléphone</strong><br />
+                +225 07 07 26 02 73<br />+225 01 03 28 18 72
+              </span>
+            </a>
+            <div class="card contact-card">
+              <span class="contact-card__icone" aria-hidden="true">
+                <svg class="icone" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              </span>
+              <span>
+                <strong>Adresse</strong><br />
+                01 BP 3862 Abidjan 01<br />Abidjan, Côte d'Ivoire
+              </span>
+            </div>
+           
+          </div>
+
+          <!-- Formulaire (statique → ouvre la messagerie via mailto) -->
+          <form class="card formulaire reveal" id="form-contact" novalidate>
+            <h3 class="card__titre">Envoyer un message</h3>
+            <div class="champ">
+              <label for="f-nom">Votre nom</label>
+              <input type="text" id="f-nom" name="nom" required placeholder="Ex. : Awa Koné" />
+            </div>
+            <div class="champ">
+              <label for="f-email">Votre email</label>
+              <input type="email" id="f-email" name="email" required placeholder="vous@exemple.com" />
+            </div>
+            <div class="champ">
+              <label for="f-message">Votre message</label>
+              <textarea id="f-message" name="message" rows="5" required
+                        placeholder="Décrivez votre besoin : cartographie, SIG, levés, drone…"></textarea>
+            </div>
+            <button class="btn btn--primaire btn--plein" type="submit">Envoyer le message</button>
+            <p class="formulaire__note" id="form-note" role="status">
+              Ce formulaire ouvre votre messagerie avec le message pré-rempli.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== PIED DE PAGE ==================== -->
+  <footer class="pied">
+    <div class="container pied__grille">
+      <p>© <span id="annee">2026</span>TABIO Bernard — Géomaticien, Abidjan (Côte d'Ivoire).</p>
+      <p class="pied__liens">
+        <a href="#accueil">Retour en haut ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bouton « retour en haut » -->
+  <button class="retour-haut" id="btn-retour-haut" aria-label="Retour en haut de page" type="button">↑</button>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925" integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
+</body>
+</html>
