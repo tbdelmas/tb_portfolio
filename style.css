@@ -367,6 +367,67 @@ ul  { list-style: none; }
 .projet__points li::marker { color: var(--vert); font-weight: 700; }
 .projet__tech { margin-bottom: 1.5rem; }
 
+/* Galerie */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  color: white;
+  text-align: left;
+  transition: var(--transition);
+  min-height: 260px;
+  cursor: pointer;
+  box-shadow: var(--ombre-moyenne, 0 12px 28px rgba(14, 35, 58, 0.15));
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 30%, rgba(10, 30, 54, 0.85));
+  content: "";
+}
+
+.gallery-item span {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-one,
+.gallery-two,
+.gallery-three,
+.gallery-four {
+  grid-column: auto;
+}
+
+.gallery-one,
+.gallery-two,
+.gallery-three,
+.gallery-four {
+  background: #dfeaf5;
+}
+
 /* Fenêtre « navigateur » factice */
 .projet__apercu { align-self: center; }
 .navigateur-factice {
